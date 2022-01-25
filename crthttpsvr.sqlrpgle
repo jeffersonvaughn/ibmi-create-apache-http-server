@@ -336,7 +336,9 @@
                       'OBJAUT(*ALL)';
           exec sql call qsys2.qcmdexc(:g_command);
 
-          g_command = 'GRTOBJAUT OBJ(COREIRST) '                       +
+          g_command = 'GRTOBJAUT OBJ('                                 +
+                                      %trim(g_lib)                     +
+                                    ') '.                              +
                                 'OBJTYPE(*LIB) '                       +
                                 'USER(QTMHHTTP QTMHHTP1) '             +
                                 'AUT(*USE)';
