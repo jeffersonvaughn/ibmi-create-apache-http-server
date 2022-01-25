@@ -338,7 +338,7 @@
 
           g_command = 'GRTOBJAUT OBJ('                                 +
                                       %trim(g_lib)                     +
-                                    ') '.                              +
+                                    ') '                               +
                                 'OBJTYPE(*LIB) '                       +
                                 'USER(QTMHHTTP QTMHHTP1) '             +
                                 'AUT(*USE)';
