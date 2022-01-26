@@ -264,7 +264,7 @@
           insertHttpLine('SetEnvIf "User-Agent" "MSIE 4\.0b2;" nokeepalive');
           insertHttpLine('SetEnvIf "User-Agent" "MSIE 4\.0b2;" ' +
                          'force-response-1.0');
-          insertHttpLine('ScriptAliasMatch /rest/([a-z0-9]*)/.* /qsys.lib/' +
+          insertHttpLine('ScriptAliasMatch /corei/([a-z0-9]*)/.* /qsys.lib/' +
                           %trim(g_lib)  +
                          '.lib/$1.pgm');
           insertHttpLine('SetEnv QIBM_CGI_LIBRARY_LIST_"' +
