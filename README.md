@@ -30,7 +30,7 @@ with a few inputs deploy a fully functional http server for REST services
        //            - port
        //            - lib (library that will search for pgm when server intance is invoked)
        //            - ssl?    
-       //            - ssl cert optional?
+       //            - ssl cert required?
        //            - ssl certificate name (created in DCM)
        //            Incoming parms used to create a fully functional Apache server intance that 
        //            will be started when the user enters command...
