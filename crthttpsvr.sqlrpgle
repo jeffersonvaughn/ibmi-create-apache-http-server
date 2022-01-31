@@ -230,7 +230,7 @@
           exec sql call qsys2.qcmdexc(:g_command);
 
           insertHttpLine('# Configuration originally created by ' +
-                         'corei@gmail.com on ' + 
+                         'corei@jeffersonvaughn.com on ' + 
                          %char(%date()) );
           if p_ssl = ' ';
             insertHttpLine('Listen *:' +                                                               
@@ -293,7 +293,17 @@
           insertHttpLine('</Directory>');
 
           if p_ssl <> ' ';
-            insertHttpLine(' ');
+            insertHttpLine(' ');                              
+            insertHttpLine('<Directory />');                 
+            insertHttpLine('  Require all denied');          
+            insertHttpLine('</Directory>');                  
+            insertHttpLine(' ');                             
+            insertHttpLine('<Directory /www/' +              
+                                  %trim(g_server) 
+                           '/htdocs>');           
+           insertHttpLine('  Require all granted');         
+           insertHttpLine('</Directory>');                  
+           insertHttpLine(' ');                             
             insertHttpLine('<VirtualHost *:' +
                             %trim(p_port) +
                            '>');
